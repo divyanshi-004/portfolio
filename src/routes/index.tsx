@@ -1,29 +1,24 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { lazy, Suspense } from "react";
+
+const Portfolio = lazy(() => import("@/components/portfolio/Portfolio"));
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "Divyanshi Jain — Full Stack MERN Developer" },
+      { name: "description", content: "Portfolio of Divyanshi Jain, BCA student, Full Stack MERN Developer and Software Tester. Projects, skills, and contact." },
+      { property: "og:title", content: "Divyanshi Jain — Full Stack MERN Developer" },
+      { property: "og:description", content: "Portfolio of Divyanshi Jain — Full Stack MERN Developer and Software Tester." },
     ],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center text-muted-foreground">Loading…</div>}>
+      <Portfolio />
+    </Suspense>
   );
 }
