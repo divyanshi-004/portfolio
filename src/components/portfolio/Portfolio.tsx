@@ -142,12 +142,12 @@ const PROJECTS: Project[] = [
 ];
 
 const TIMELINE = [
-  { year: "2022", title: "Started Learning Programming", desc: "Began my coding journey with C, Java and Web Development.", Icon: Code2, accent: "from-sky-500 to-cyan-400" },
-  { year: "2023", title: "Built Restaurant Management System", desc: "Developed my first full-stack project.", Icon: Utensils, accent: "from-rose-500 to-pink-500" },
-  { year: "2023", title: "Built Hospital Management System", desc: "Learned to build complex systems with role-based access.", Icon: Hospital, accent: "from-violet-500 to-fuchsia-500" },
-  { year: "2024", title: "Worked on CSFAQ (SmartIntern)", desc: "Worked on an intelligent FAQ system during my internship.", Icon: Brain, accent: "from-amber-500 to-orange-500" },
-  { year: "2024", title: "Developed Online Examination System", desc: "Built a complete exam platform with evaluation system.", Icon: ClipboardList, accent: "from-emerald-500 to-teal-500" },
-  { year: "2024 — Present", title: "Learning MERN Stack", desc: "Continuously learning and building new projects.", Icon: Rocket, accent: "from-blue-500 to-indigo-500" },
+  { year: "2023", title: "Started Learning Programming", desc: "Began my coding journey with C, Java and Web Development.", Icon: Code2, accent: "from-sky-500 to-cyan-400" },
+  { year: "2024", title: "Built Restaurant Management System", desc: "Developed my first full-stack project.", Icon: Utensils, accent: "from-rose-500 to-pink-500" },
+  { year: "2025", title: "Built Hospital Management System", desc: "Learned to build complex systems with role-based access.", Icon: Hospital, accent: "from-violet-500 to-fuchsia-500" },
+  { year: "2026", title: "Worked on CSFAQ (SmartIntern)", desc: "Worked on an intelligent FAQ system during my internship.", Icon: Brain, accent: "from-amber-500 to-orange-500" },
+  { year: "2026", title: "Developed Online Examination System", desc: "Built a complete exam platform with evaluation system.", Icon: ClipboardList, accent: "from-emerald-500 to-teal-500" },
+  { year: "2026 — Present", title: "Learning MERN Stack", desc: "Continuously learning and building new projects.", Icon: Rocket, accent: "from-blue-500 to-indigo-500" },
 ];
 
 const ACHIEVEMENTS = [
@@ -258,9 +258,13 @@ function Hero() {
             I build responsive web applications and love turning ideas into real-world solutions.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href="#resume" className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand to-violet px-5 py-3 text-sm font-medium text-white shadow-lg shadow-brand/20 hover:opacity-95 transition">
-              <Download className="size-4" /> Download Resume
-            </a>
+           <a
+  href="/resume.pdf"
+  download
+  className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand to-violet px-5 py-3 text-sm font-medium text-white shadow-lg shadow-brand/20 hover:opacity-95 transition"
+>
+  <Download className="size-4" /> Download Resume
+</a>
             <a href="#projects" className="inline-flex items-center gap-2 rounded-xl border border-border px-5 py-3 text-sm font-medium hover:bg-white/5 transition">
               View Projects
             </a>
@@ -270,9 +274,9 @@ function Hero() {
           </div>
           <div className="mt-8 flex items-center gap-3">
             {[
-              { href: "https://github.com/", Icon: Github, label: "GitHub" },
-              { href: "https://linkedin.com/", Icon: Linkedin, label: "LinkedIn" },
-              { href: "mailto:divyanshi@example.com", Icon: Mail, label: "Email" },
+              { href: "https://github.com/divyanshi-004", Icon: Github, label: "GitHub" },
+              { href: "https://www.linkedin.com/in/divyanshi-jain-a23003339?utm_source=share_via&utm_content=profile&utm_medium=member_android", Icon: Linkedin, label: "LinkedIn" },
+              { href: "mailto:diyaj96278@gmail.com", Icon: Mail, label: "Email" },
             ].map(({ href, Icon, label }) => (
               <a key={label} href={href} aria-label={label} className="grid place-items-center h-10 w-10 rounded-xl border border-border text-muted-foreground hover:text-foreground hover:border-brand transition">
                 <Icon className="size-4" />
@@ -524,7 +528,7 @@ type GhUser = { name?: string; login: string; bio?: string; public_repos: number
 type GhRepo = { id: number; name: string; html_url: string; description: string | null; language: string | null; stargazers_count: number; forks_count: number };
 
 function GitHubSection() {
-  const username = "divyanshi-jain";
+  const username = "divyanshi-004";
   const [user, setUser] = useState<GhUser | null>(null);
   const [repos, setRepos] = useState<GhRepo[]>([]);
 
@@ -544,7 +548,7 @@ function GitHubSection() {
   const fallbackRepos: GhRepo[] = [
     { id: 1, name: "restaurant-management-system", html_url: "#", description: "Full Stack Restaurant Management System", language: "JavaScript", stargazers_count: 24, forks_count: 6 },
     { id: 2, name: "hospital-management-system", html_url: "#", description: "Hospital Management System", language: "JavaScript", stargazers_count: 18, forks_count: 4 },
-    { id: 3, name: "csfaq-smartintern", html_url: "#", description: "Intelligent FAQ System", language: "JavaScript", stargazers_count: 31, forks_count: 7 },
+    { id: 3, name: "csfaq-smartintern", html_url: "https://github.com/divyanshi-004/interflowFAQ", description: "Intelligent FAQ System", language: "JavaScript", stargazers_count: 31, forks_count: 7 },
     { id: 4, name: "online-examination-system", html_url: "#", description: "Online Exam Platform", language: "JavaScript", stargazers_count: 22, forks_count: 5 },
   ];
   const showRepos = repos.length ? repos : fallbackRepos;
@@ -644,12 +648,21 @@ function Resume() {
             <div className="text-sm text-muted-foreground">Full Stack MERN Developer · Software Tester</div>
           </div>
           <div className="flex flex-col sm:flex-row gap-3">
-            <a href="#" className="inline-flex items-center gap-2 rounded-xl border border-border px-4 py-2.5 text-sm hover:bg-white/5">
-              <FileText className="size-4" /> Preview Resume
-            </a>
-            <a href="#" className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand to-violet px-4 py-2.5 text-sm font-medium text-white">
-              <Download className="size-4" /> Download Resume
-            </a>
+            <a
+  href="/resume.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center gap-2 rounded-xl border border-border px-4 py-2.5 text-sm hover:bg-white/5"
+>
+  <FileText className="size-4" /> Preview Resume
+</a>
+            <a
+  href="/resume.pdf"
+  download
+  className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand to-violet px-4 py-2.5 text-sm font-medium text-white"
+>
+  <Download className="size-4" /> Download Resume
+</a>
           </div>
         </div>
       </div>
@@ -680,9 +693,9 @@ function Contact() {
           </form>
           <div className="space-y-3">
             {[
-              { Icon: Mail, label: "Email", value: "divyanshi@example.com" },
-              { Icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/divyanshi-jain" },
-              { Icon: Github, label: "GitHub", value: "github.com/divyanshi-jain" },
+              { Icon: Mail, label: "Email", value: "diyaj96278@gmail.com" },
+              { Icon: Linkedin, label: "LinkedIn", value: "https://www.linkedin.com/in/divyanshi-jain-a23003339?utm_source=share_via&utm_content=profile&utm_medium=member_android" },
+              { Icon: Github, label: "GitHub", value: "https://github.com/divyanshi-004" },
               { Icon: MapPin, label: "Location", value: "India" },
             ].map(({ Icon, label, value }) => (
               <div key={label} className="glass rounded-2xl p-5 flex items-center gap-4">
