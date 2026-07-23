@@ -534,7 +534,7 @@ function Experience() {
             </div>
 
             <span className="text-sm text-muted-foreground">
-              2026
+              2025
             </span>
           </div>
 
@@ -546,7 +546,40 @@ function Experience() {
             <li>• Improved application performance and resolved bugs through debugging.</li>
           </ul>
         </motion.div>
+<motion.div
+  initial="hidden"
+  whileInView="show"
+  viewport={{ once: true }}
+  variants={fadeUp}
+  className="glass rounded-3xl p-8 mb-10 border border-violet/20"
+>
+  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+    <div>
+      <h3 className="text-2xl font-semibold">
+        Software Development Intern
+      </h3>
+      <p className="text-brand font-medium">
+        Vicharanashala Lab, IIT Ropar
+      </p>
+    </div>
 
+    <span className="text-sm text-muted-foreground">
+      2026
+    </span>
+  </div>
+
+  <ul className="mt-5 space-y-3 text-muted-foreground">
+    <li>• Contributed to the development of the CSFAQ project as part of the SmartIntern internship program.</li>
+
+    <li>• Built responsive frontend components using React and collaborated on full-stack application development.</li>
+
+    <li>• Worked with Git and GitHub to manage source code and collaborate with the development team.</li>
+
+    <li>• Participated in agile stand-up meetings, sprint planning, and project discussions throughout the internship.</li>
+
+    <li>• Strengthened problem-solving, debugging, and software development skills while delivering real-world project features.</li>
+  </ul>
+</motion.div>
         <SectionHeading
           label="Timeline"
           title="My Development Journey"
