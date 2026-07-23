@@ -4,6 +4,7 @@ import { TypeAnimation } from "react-type-animation";
 import {
   Github,
   Linkedin,
+   Briefcase,
   Mail,
   Download,
   ArrowRight,
@@ -102,45 +103,79 @@ const PROJECTS: Project[] = [
     slug: "restaurant",
     name: "Restaurant Management System",
     image: restaurantImg,
-    description: "A complete solution for managing restaurant operations including menu, orders, billing and admin management.",
+    description:
+      "A full-stack restaurant management application designed to streamline restaurant operations through secure authentication, order management, billing, and role-based access control.",
     tech: ["React", "Node.js", "MongoDB", "Express.js"],
-    features: ["Menu & order management", "Billing system", "Admin dashboard", "Role-based access"],
-    challenges: "Designing a normalized data model for menu, orders and billing that scales as items grow.",
-    learned: "Solidified my understanding of REST APIs, JWT auth, and MongoDB aggregation pipelines.",
+    features: [
+      "Secure user authentication",
+      "Menu & order management",
+      "Billing and invoice generation",
+      "Role-based admin dashboard",
+    ],
+    challenges:
+      "Designed an efficient database schema to manage menus, customer orders, and billing while maintaining scalability and data consistency.",
+    learned:
+      "Strengthened my expertise in the MERN stack, RESTful APIs, JWT authentication, MongoDB data modeling, and backend architecture.",
   },
+
   {
     slug: "hospital",
     name: "Hospital Management System",
     image: hospitalImg,
-    description: "A system to manage patients, doctors, appointments, and hospital administration efficiently.",
+    description:
+      "A comprehensive healthcare management platform that simplifies patient registration, appointment scheduling, doctor management, and administrative workflows.",
     tech: ["React", "Node.js", "MongoDB", "Express.js"],
-    features: ["Patient records", "Appointment scheduling", "Doctor dashboards", "Role-based access"],
-    challenges: "Modelling complex relationships between patients, doctors and visits without coupling collections.",
-    learned: "Learned to structure larger codebases and apply role-based access patterns end-to-end.",
+    features: [
+      "Patient management system",
+      "Doctor dashboard",
+      "Appointment scheduling",
+      "Secure role-based authentication",
+    ],
+    challenges:
+      "Implemented secure role-based access while managing relationships between patients, doctors, and appointments efficiently.",
+    learned:
+      "Enhanced my understanding of scalable backend development, authentication, authorization, and modular application architecture.",
   },
+
   {
     slug: "csfaq",
-    name: "CSFAQ (SmartIntern Project)",
+    name: "CSFAQ – AI Knowledge Base (SmartIntern Project)",
     image: csfaqImg,
-    description: "An intelligent FAQ system developed during SmartIntern to enhance user interaction and information retrieval.",
+    description:
+      "Developed an intelligent FAQ platform during my internship to improve information retrieval through categorized knowledge management and smart search functionality.",
     tech: ["React", "Node.js", "MongoDB"],
     featured: true,
-    features: ["Smart search", "Categorized FAQs", "Admin moderation", "Responsive UI"],
-    challenges: "Ranking the most relevant answers from a growing knowledge base with simple heuristics.",
-    learned: "How to scope a real internship deliverable, work to deadlines and ship something usable.",
+    features: [
+      "Intelligent search",
+      "Category-based FAQs",
+      "Admin management panel",
+      "Responsive user interface",
+    ],
+    challenges:
+      "Designed an efficient search mechanism capable of retrieving relevant information quickly from an expanding knowledge base.",
+    learned:
+      "Gained valuable industry experience by collaborating on an internship project, improving problem-solving, teamwork, and software delivery practices.",
   },
+
   {
     slug: "exam",
     name: "Online Examination System",
     image: examImg,
-    description: "An examination platform with student login, online tests, result generation and evaluation system.",
+    description:
+      "A secure online examination platform featuring student authentication, timed assessments, automatic evaluation, and real-time result generation.",
     tech: ["React", "Node.js", "MySQL", "Express.js"],
-    features: ["Student authentication", "Timed online tests", "Auto evaluation", "Result analytics"],
-    challenges: "Preventing tab-switching and ensuring timer integrity even after refresh.",
-    learned: "Stronger grasp of state persistence, server-trust boundaries, and SQL schema design.",
+    features: [
+      "Student authentication",
+      "Timed online examinations",
+      "Automatic result evaluation",
+      "Performance analytics",
+    ],
+    challenges:
+      "Implemented secure exam sessions with timer synchronization and minimized opportunities for unfair practices during assessments.",
+    learned:
+      "Improved my knowledge of state management, SQL database design, secure application development, and performance optimization.",
   },
 ];
-
 const TIMELINE = [
   { year: "2023", title: "Started Learning Programming", desc: "Began my coding journey with C, Java and Web Development.", Icon: Code2, accent: "from-sky-500 to-cyan-400" },
   { year: "2024", title: "Built Restaurant Management System", desc: "Developed my first full-stack project.", Icon: Utensils, accent: "from-rose-500 to-pink-500" },
@@ -235,11 +270,11 @@ function Hero() {
           <h1 className="mt-2 text-5xl md:text-7xl font-semibold">
             <span className="gradient-text">Divyanshi Jain</span>
           </h1>
-          <div className="mt-6 space-y-1 text-lg md:text-xl text-foreground/90">
-            <p>BCA Student</p>
-            <p>Full Stack MERN Developer</p>
-            <p>Software Tester</p>
-          </div>
+         <div className="mt-6 space-y-1 text-lg md:text-xl text-foreground/90">
+  <p>BCA Graduate (2026)</p>
+  <p>Software Development Intern</p>
+  <p>Full Stack MERN Developer</p>
+</div>
           <div className="mt-5 text-brand text-lg md:text-xl font-medium h-8">
             <TypeAnimation
               sequence={[
@@ -254,9 +289,9 @@ function Hero() {
               cursor
             />
           </div>
-          <p className="mt-6 text-muted-foreground max-w-md">
-            I build responsive web applications and love turning ideas into real-world solutions.
-          </p>
+         <p className="mt-6 text-muted-foreground max-w-md">
+  BCA graduate and Software Development Intern specializing in the MERN stack. I build responsive, scalable web applications with modern technologies and enjoy transforming complex ideas into efficient, user-focused solutions.
+</p>
           <div className="mt-8 flex flex-wrap gap-3">
            <a
   href="/resume.pdf"
@@ -325,8 +360,8 @@ function About() {
         <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeUp} className="glass rounded-3xl p-8">
           <span className="section-label"><span className="section-dot" />About Me</span>
           <p className="mt-5 text-muted-foreground leading-relaxed">
-            I am a BCA student passionate about Full Stack Development using the MERN stack. I enjoy building responsive web applications, solving real-world problems, and writing clean, maintainable code. Alongside development, I have experience with software testing and API testing.
-          </p>
+  I am a BCA graduate with hands-on experience in full-stack web development through internships and personal projects. My expertise lies in the MERN stack, where I enjoy building responsive user interfaces, developing secure backend services, and creating scalable web applications. I also have experience with software testing, API testing, Git, and GitHub, enabling me to contribute effectively across different stages of the software development lifecycle. I am passionate about continuous learning and excited to build innovative solutions that create real-world impact.
+</p>
           <a href="#contact" className="mt-6 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand to-violet px-5 py-3 text-sm font-medium text-white hover:opacity-95 transition">
             Know More About Me <ArrowRight className="size-4" />
           </a>
@@ -473,32 +508,89 @@ function Experience() {
   return (
     <section id="experience" className="py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading label="Experience Timeline" title="My journey so far" />
+
+        <SectionHeading
+          label="Professional Experience"
+          title="Internship & Learning Journey"
+          subtitle="My practical experience, projects, and continuous growth as a software developer."
+        />
+
+        {/* Internship Card */}
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          variants={fadeUp}
+          className="glass rounded-3xl p-8 mb-10 border border-brand/20"
+        >
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+            <div>
+              <h3 className="text-2xl font-semibold">
+                Software Development Intern
+              </h3>
+              <p className="text-brand font-medium">
+                Softpro India
+              </p>
+            </div>
+
+            <span className="text-sm text-muted-foreground">
+              2026
+            </span>
+          </div>
+
+          <ul className="mt-5 space-y-3 text-muted-foreground">
+            <li>• Developed responsive full-stack web applications using the MERN stack.</li>
+            <li>• Built RESTful APIs and integrated MongoDB databases.</li>
+            <li>• Collaborated using Git and GitHub for version control.</li>
+            <li>• Performed software testing and API testing to ensure application quality.</li>
+            <li>• Improved application performance and resolved bugs through debugging.</li>
+          </ul>
+        </motion.div>
+
+        <SectionHeading
+          label="Timeline"
+          title="My Development Journey"
+        />
+
         <div className="relative pl-6 sm:pl-10">
           <div className="absolute left-2 sm:left-4 top-2 bottom-2 w-px bg-gradient-to-b from-brand via-violet to-transparent" />
+
           <div className="space-y-6">
             {TIMELINE.map((t, i) => (
               <motion.div
                 key={i}
-                initial="hidden" whileInView="show" viewport={{ once: true, margin: "-60px" }} variants={fadeUp}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, margin: "-60px" }}
+                variants={fadeUp}
                 className="relative glass rounded-2xl p-5 sm:p-6"
               >
-                <div className={`absolute -left-[34px] sm:-left-[42px] top-6 grid place-items-center size-10 rounded-xl bg-gradient-to-br ${t.accent} text-white shadow-lg`}>
+                <div
+                  className={`absolute -left-[34px] sm:-left-[42px] top-6 grid place-items-center size-10 rounded-xl bg-gradient-to-br ${t.accent} text-white shadow-lg`}
+                >
                   <t.Icon className="size-5" />
                 </div>
+
                 <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
                   <h3 className="font-semibold">{t.title}</h3>
-                  <span className="text-xs text-muted-foreground">{t.year}</span>
+                  <span className="text-xs text-muted-foreground">
+                    {t.year}
+                  </span>
                 </div>
-                <p className="mt-1 text-sm text-muted-foreground">{t.desc}</p>
+
+                <p className="mt-1 text-sm text-muted-foreground">
+                  {t.desc}
+                </p>
               </motion.div>
             ))}
           </div>
         </div>
+
       </div>
     </section>
   );
 }
+  
 
 function Achievements() {
   return (
@@ -540,9 +632,13 @@ function GitHubSection() {
   }, []);
 
   const fallback = {
-    name: "Divyanshi Jain", login: username, bio: "BCA Student | Full Stack Developer",
-    public_repos: 35, followers: 25, following: 20,
-  };
+  name: "Divyanshi Jain",
+  login: username,
+  bio: "BCA Graduate | Software Development Intern | MERN Stack Developer",
+  public_repos: 35,
+  followers: 25,
+  following: 20,
+};
   const u = user || (fallback as any);
 
   const fallbackRepos: GhRepo[] = [
@@ -692,16 +788,41 @@ function Contact() {
             </button>
           </form>
           <div className="space-y-3">
-            {[
-              { Icon: Mail, label: "Email", value: "diyaj96278@gmail.com" },
-              { Icon: Linkedin, label: "LinkedIn", value: "https://www.linkedin.com/in/divyanshi-jain-a23003339?utm_source=share_via&utm_content=profile&utm_medium=member_android" },
-              { Icon: Github, label: "GitHub", value: "https://github.com/divyanshi-004" },
-              { Icon: MapPin, label: "Location", value: "India" },
-            ].map(({ Icon, label, value }) => (
-              <div key={label} className="glass rounded-2xl p-5 flex items-center gap-4">
-                <div className="grid place-items-center size-11 rounded-xl bg-secondary/60 border border-border">
-                  <Icon className="size-5 text-brand" />
-                </div>
+  {[
+    {
+      Icon: Mail,
+      label: "Email",
+      value: "diyaj96278@gmail.com",
+    },
+    {
+      Icon: Linkedin,
+      label: "LinkedIn",
+      value: "linkedin.com/in/divyanshi-jain-a23003339",
+    },
+    {
+      Icon: Github,
+      label: "GitHub",
+      value: "github.com/divyanshi-004",
+    },
+    {
+      Icon: Briefcase,
+      label: "Availability",
+      value: "Open to Full-Time Opportunities",
+    },
+    {
+      Icon: MapPin,
+      label: "Location",
+      value: "Uttar Pradesh, India",
+    },
+  ].map(({ Icon, label, value }) => (
+    <div
+      key={label}
+      className="glass rounded-2xl p-5 flex items-center gap-4"
+    >
+      <div className="grid place-items-center size-11 rounded-xl bg-secondary/60 border border-border">
+        <Icon className="size-5 text-brand" />
+      </div>
+    
                 <div>
                   <div className="text-xs text-muted-foreground">{label}</div>
                   <div className="text-sm font-medium">{value}</div>
@@ -719,41 +840,107 @@ function Footer() {
   return (
     <footer className="border-t border-border mt-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 grid md:grid-cols-4 gap-8 text-sm">
+
+        {/* Brand */}
         <div>
           <div className="flex items-center gap-2">
-            <span className="grid place-items-center h-9 w-9 rounded-xl bg-gradient-to-br from-brand to-violet text-white font-bold">DJ</span>
-            <span className="font-semibold">Divyanshi</span>
+            <span className="grid place-items-center h-9 w-9 rounded-xl bg-gradient-to-br from-brand to-violet text-white font-bold">
+              DJ
+            </span>
+            <span className="font-semibold">Divyanshi Jain</span>
           </div>
-          <p className="mt-3 text-muted-foreground">Building digital solutions and learning every day.</p>
+
+          <p className="mt-3 text-muted-foreground">
+            BCA Graduate • MERN Stack Developer • Passionate about building scalable software solutions.
+          </p>
+
           <div className="mt-4 flex gap-2">
-            {[Github, Linkedin, Mail].map((Icon, i) => (
-              <a key={i} href="#" className="grid place-items-center h-9 w-9 rounded-xl border border-border text-muted-foreground hover:text-foreground">
+            {[
+              {
+                icon: Github,
+                href: "https://github.com/divyanshi-004",
+                label: "GitHub",
+              },
+              {
+                icon: Linkedin,
+                href: "https://www.linkedin.com/in/divyanshi-jain-a23003339/",
+                label: "LinkedIn",
+              },
+              {
+                icon: Mail,
+                href: "diyaj96278@gmail.com", // Replace with your email
+                label: "Email",
+              },
+            ].map(({ icon: Icon, href, label }, i) => (
+              <a
+                key={i}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="grid place-items-center h-9 w-9 rounded-xl border border-border text-muted-foreground hover:text-foreground hover:border-brand transition-colors"
+              >
                 <Icon className="size-4" />
               </a>
             ))}
           </div>
         </div>
+
+        {/* Navigation */}
         <div>
-          <h4 className="font-semibold mb-3">Quick Links</h4>
+          <h4 className="font-semibold mb-3">Navigation</h4>
           <ul className="space-y-1.5 text-muted-foreground">
-            {NAV.slice(0, 6).map(n => <li key={n.id}><a href={`#${n.id}`} className="hover:text-foreground">{n.label}</a></li>)}
+            {NAV.slice(0, 6).map((n) => (
+              <li key={n.id}>
+                <a href={`#${n.id}`} className="hover:text-foreground">
+                  {n.label}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
+
+        {/* Technologies */}
         <div>
-          <h4 className="font-semibold mb-3">Top Technologies</h4>
+          <h4 className="font-semibold mb-3">Tech Stack</h4>
           <ul className="space-y-1.5 text-muted-foreground">
-            {["React", "Node.js", "MongoDB", "Express.js", "JavaScript", "Tailwind CSS"].map(t => <li key={t}>{t}</li>)}
+            {[
+              "React",
+              "Node.js",
+              "MongoDB",
+              "Express.js",
+              "JavaScript",
+              "Tailwind CSS",
+            ].map((tech) => (
+              <li key={tech}>{tech}</li>
+            ))}
           </ul>
         </div>
+
+        {/* Resources */}
         <div>
-          <h4 className="font-semibold mb-3">Other Links</h4>
+          <h4 className="font-semibold mb-3">Resources</h4>
           <ul className="space-y-1.5 text-muted-foreground">
-            <li><a href="#github" className="hover:text-foreground">GitHub</a></li>
-            <li><a href="#resume" className="hover:text-foreground">Resume</a></li>
-            <li>Blog (Coming Soon)</li>
+            <li>
+              <a href="#projects" className="hover:text-foreground">
+                Projects
+              </a>
+            </li>
+            <li>
+              <a href="#github" className="hover:text-foreground">
+                GitHub
+              </a>
+            </li>
+            <li>
+              <a href="#resume" className="hover:text-foreground">
+                Resume
+              </a>
+            </li>
           </ul>
         </div>
+
       </div>
+
       <div className="border-t border-border">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5 text-xs text-muted-foreground flex flex-col sm:flex-row items-center justify-between gap-2">
           <span>© 2026 Divyanshi Jain. All rights reserved.</span>
@@ -763,6 +950,8 @@ function Footer() {
     </footer>
   );
 }
+
+
 
 function ScrollProgress() {
   const { scrollYProgress } = useScroll();
